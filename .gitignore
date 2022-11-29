@@ -5,6 +5,10 @@
 Debug
 Release
 
+# generated image files
+.png
+.ppm
+
 # Prerequisites
 *.d
 
