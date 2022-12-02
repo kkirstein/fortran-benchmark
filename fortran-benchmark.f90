@@ -46,13 +46,13 @@ program fortranbenchmark
     write (*, *) "Benchmark"
     write (*, *) "========="
 
-! #ifdef __GFORTRAN__
-!     write (*, *) "Compiler infos"
-!     write (*, *) "--------------"
-! 
-!     write (*, *) 'Compiler version: ', compiler_version()
-!     write (*, *) 'Compiler options: ', compiler_options()
-! #endif
+#if defined(__GFORTRAN__) || defined(__INTEL_COMPILER)
+    write (*, *) "Compiler infos"
+    write (*, *) "--------------"
+
+    write (*, *) 'Compiler version: ', compiler_version()
+    write (*, *) 'Compiler options: ', compiler_options()
+#endif
 
     write (*, *)
 !    !$omp parallel
