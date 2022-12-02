@@ -55,12 +55,12 @@ program fortranbenchmark
 #endif
 
     write (*, *)
-!    !$omp parallel
-!    !$omp master
-!    write (*, '(x, a, i2)') "OpenMP threads: ", omp_get_num_threads()
-!    !$omp end master
-!    !$omp end parallel
-!    write (*, *)
+    !$omp parallel
+    !$omp master
+    write (*, '(x, a, i2)') "OpenMP threads: ", omp_get_num_threads()
+    !$omp end master
+    !$omp end parallel
+   write (*, *)
 
     write (*,*) "Fibonacci numbers"
     write (*,*) "-----------------"
